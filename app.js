@@ -113,7 +113,8 @@ function displayOutput(){
 function ShowLoader()
 {
     loaderVar=document.querySelector(".loader")
-    setTimeout(() => { loaderVar.style.display="block"; }, 0);
+    setTimeout(() => { loaderVar.style.display="block";
+    document.querySelector('.display').innerHTML = ''; }, 0);
 }
 function hideLoader()
 {
