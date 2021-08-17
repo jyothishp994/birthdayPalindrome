@@ -40,7 +40,13 @@ font-size:3rem;
 margin:0 auto;
 text-align: center;
 }
-
+.header-sub{
+    font-size:0.85rem;
+    margin:0;
+    text-align: center;
+    display: block;
+    padding: 1rem;
+}
 footer{
 text-align: center;
 margin-top:20rem;

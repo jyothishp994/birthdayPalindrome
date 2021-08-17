@@ -1,4 +1,4 @@
-var found=0;
+var found='';
 function IsPalindrome()
 {
 
@@ -206,10 +206,13 @@ function reverseString(str) {
   birthdayVar=document.querySelector('#birthday');
   btnSubmitVar.addEventListener("click",CallCheckPalindrome);
   btnSubmitVar.addEventListener("click",ShowLoader);
+
    function CallCheckPalindrome(){
 
 
   console.log(birthdayVar.value)
+  if(birthdayVar.value)
+  {
   birthdayVarDate = new Date(birthdayVar.value)
   console.log(birthdayVarDate.getDate());
   console.log((birthdayVarDate.getMonth())+1);
@@ -232,7 +235,7 @@ IsPalindrome();
     found=0;
     
 }
-else{
+else if(found==0){
     output=getNextPalindromeDate(date);
     num_of_days=output[0];
     next_palindrome_date=''+output[1].day+'-'+output[1].month+'-'+output[1].year
@@ -245,6 +248,14 @@ else{
     //document.querySelector('.display').innerHTML = showOutputMsg
     displayOutput();
 }
+  }
+  else
+  {
+      
+    showOutputMsg="Please select the date"
+    hideLoader();
+    displayOutput();
+  }
 
 }
 function displayOutput(){
